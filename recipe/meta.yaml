@@ -45,7 +45,7 @@ about:
   home: https://CRAN.R-project.org/package=pspline
   license: Unlimited
   summary: Smoothing splines with penalties on order m derivatives.
-  license_family: MIT
+  license_family: OTHER
 
 extra:
   recipe-maintainers:
