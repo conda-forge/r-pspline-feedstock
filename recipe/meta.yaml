@@ -1,4 +1,4 @@
-{% set version = '1.0-18' %}
+{% set version = "1.0-18" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -13,8 +13,8 @@ source:
   sha256: f71cf293bd5462e510ac5ad16c4a96eda18891a0bfa6447dd881c65845e19ac7
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 3
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,16 +25,16 @@ requirements:
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('fortran') }}        # [not win]
     - {{ compiler('m2w64_fortran') }}  # [win]
-    - {{posix}}filesystem        # [win]
-    - {{posix}}make
-    - {{posix}}sed               # [win]
-    - {{posix}}coreutils         # [win]
-    - {{posix}}zip               # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
 
 test:
   commands:
@@ -45,7 +45,7 @@ about:
   home: https://CRAN.R-project.org/package=pspline
   license: Unlimited
   summary: Smoothing splines with penalties on order m derivatives.
-  license_family: MIT
+  license_family: OTHER
 
 extra:
   recipe-maintainers:
